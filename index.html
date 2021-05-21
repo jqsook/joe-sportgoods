@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/style/main.css" />
+    <title>Joe's- Sporting Goods</title>
+  </head>
+
+  <body>
+    <header>
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE3QRtZCwWm0F62vbwgDvg9v2CmVYyv1GxVg&usqp=CAU"
+            width="45"
+            height="45"
+            alt=""
+            loading="lazy"
+          />
+          <span class="ml-2">Big Joe's Sporting Goods</span>
+        </a>
+        <button type="submit">Cart</button>
+        <div class="col-6">
+          <button
+            class="btn btn-success"
+            onclick="app.itemController.addMoney()"
+          >
+            > Add Money
+          </button>
+        </div>
+        <h4 class="text-white">Money: $<span id="money"></span></h4>
+      </nav>
+    </header>
+    <!-- Cards -->
+    <main>
+      <div class="row mt-5">
+        <div class="col-6"></div>
+        <div class="col-6"></div>
+      </div>
+      <div class="row justify-content-between mt-5 p-2" id="items"></div>
+    </main>
+
+    <!-- Footer section -->
+    <footer class="container-fluid bg-dark text-light">
+      <div class="row text-center"></div>
+    </footer>
+
+    <script src="app/main.js" type="module"></script>
+  </body>
+</html>
