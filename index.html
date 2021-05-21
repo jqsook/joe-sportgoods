@@ -29,10 +29,9 @@
           <span class="ml-2">Big Joe's Sporting Goods</span>
         </a>
         <!--The form button-->
-        <button onclick="app.itemsController.showItemForm(event)">Cart</button>
+        <button onclick="app.itemsController.addCart()">Cart</button>
         <div id="cart-form"></div>
-        <!--Tried adding the event LAST THING LAST NIGHT-->
-        <div class="col-6">
+        <div class="col-4">
           <button
             class="btn btn-success"
             onclick="app.itemsController.addMoney()"
@@ -40,7 +39,12 @@
             > Add Money
           </button>
         </div>
-        <h4 class="text-white">Money: $<span id="money"></span></h4>
+        <div class="col-8 d-flex justify-content-space-between">
+          <h5 class="text-white mr-5">
+            Cart Total $<span id="cartTotal"></span>
+          </h5>
+          <h5 class="text-white ml-4">Money $<span id="money"></span></h5>
+        </div>
       </nav>
       <div class="row" id="purchases"></div>
     </header>

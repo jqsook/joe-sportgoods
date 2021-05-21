@@ -23,15 +23,19 @@ export default class ItemsController {
     console.log("You are in the items control")
     ProxyState.on('money', drawMoney)
     ProxyState.on('items', drawItems)
-    ProxyState.on('cart', drawForm)
+    // ProxyState.on('cart', drawForm)
     drawMoney()
     drawItems()
-    drawForm()
+    // drawForm()
   }
     
   addMoney() {
-    console.log("button worked");
+    console.log("Money button worked");
     itemsService.addMoney()
+  }
+  addCart() {
+    console.log("Cart button worked in Controller");
+    itemsService.addCart()
   }
       
   purchaseItem(itemName) {
@@ -59,8 +63,9 @@ export default class ItemsController {
       `
     })
   }
-  addCart(event) {
-    event.preventDefault()
+}
+  // addCart() {
+  //   event.preventDefault()
     // console.log(event) //For testing to see what happens before prevent default.  Should see submit event in the console.
 
     // // THis is for taking info from the forms
@@ -76,14 +81,14 @@ export default class ItemsController {
     // console.log(formData)
     // ItemsService.addCar(formData)
     //Dont need to draw as it should update when the page changes
-    form.reset()
-  }
-  showItemForm() {
-    document.getElementById('cart-form').classList.remove('d-none')
-  }
-  showItemForm() {
-    document.getElementById('cart-form').classList.add('d-none')
-  }
-}
+    // form.reset()
+//   }
+//   showItemForm() {
+//     document.getElementById('cart-form').classList.remove('d-none')
+//   }
+//   showItemForm() {
+//     document.getElementById('cart-form').classList.add('d-none')
+//   }
+// }
   
-  document.getElementById('purchases').innerHTML = template
+//   document.getElementById('purchases').innerHTML = template
