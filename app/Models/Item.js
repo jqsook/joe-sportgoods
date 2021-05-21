@@ -9,17 +9,17 @@ export default class Item {
 
   get Template() {
     return  /*html*/ `
-    <div class="card" style="width: 18rem;">
+    <div class="card mt-2" style="width: 18rem;">
           <img class="card-img-top" src="${this.img}" alt="Card image cap">
           <div class="card-body">
           <h5 class="card-title">${this.name}</h5>
           <p class="card-text">${this.description}</p>
-          <p class="card-text">Price - ${this.price}</p>
+          <p class="card-text">Price $ - ${this.price}</p>
           <p class="card-text ${this.quantity > 3 ? 'text-success' : this.quantity >= 1 ? 'text-warning' : this.quantity == 0 ? 'text-danger' : ""}">Quantity - ${this.quantity}</p>
           <button class="btn btn-danger" onclick="app.itemsController.purchaseItem('${this.name}')">Purchase Me</button>
         </div>
     </div>
     `
   }
-
+// This has key helpers from fireside to aid with this weekends challenge 4
 }

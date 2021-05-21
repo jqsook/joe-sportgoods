@@ -28,7 +28,10 @@
           />
           <span class="ml-2">Big Joe's Sporting Goods</span>
         </a>
-        <button type="submit">Cart</button>
+        <!--The form button-->
+        <button onclick="app.itemsController.showItemForm(event)">Cart</button>
+        <div id="cart-form"></div>
+        <!--Tried adding the event LAST THING LAST NIGHT-->
         <div class="col-6">
           <button
             class="btn btn-success"
@@ -39,6 +42,7 @@
         </div>
         <h4 class="text-white">Money: $<span id="money"></span></h4>
       </nav>
+      <div class="row" id="purchases"></div>
     </header>
     <!-- Cards -->
     <main>
@@ -55,3 +59,10 @@
     <script src="app/main.js" type="module"></script>
   </body>
 </html>
+
+<!-- Use this for the toggling the form -->
+<!-- <div class="col-12">
+            <button onclick="app.carsController.showCarForm()">
+              Show Car Form
+            </button>
+          </div> -->

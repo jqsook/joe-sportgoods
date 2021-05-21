@@ -1,4 +1,5 @@
 import { ProxyState } from "../AppState.js";
+import Item from "../Models/Item.js";
 
 
 class ItemsService {
@@ -21,6 +22,16 @@ purchaseItem(itemName){
       window.alert("Insufficient Funds")
     }
   }
+  
+  
+  addCart(formData) {
+    new Item(formData.make, formData.model, formData.model, formData.miles, formData.color, formData.price, formData.img)
+    ProxyState.items.unshift(newItem) 
+    ProxyState.items = ProxyState.cars //triggers all the events to occur.
+    ProxyState.items = [newItem, ...ProxyState.items] //Use this if you dont want to use the unshift. THis way expands the array out. Called the spread operator (...) its the 3 dots.
+  }
+  
 }
+
   export const itemsService = new ItemsService()
 
